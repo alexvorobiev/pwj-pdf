@@ -5,12 +5,13 @@
 
 python3.pkgs.buildPythonApplication rec {
   pname = "pystitcher";
-  version = "1.0.2";
-  pyproject = true;
+  version = "1.0.4";
+  # pyproject = true;
+  format = "wheel";
 
   src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-MYSrD+DWm+YUHMH0FK04w6IBUFuy4cxoH5Fw0Z7w4gg=";
+    inherit pname version format;
+    hash = "sha256-upsGyKK89B1aEmrwRehLRNaVUZte4FEGlGUBEC7birs=";
   };
 
   nativeBuildInputs = [
